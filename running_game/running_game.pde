@@ -8,7 +8,7 @@ SoundFile backgroundMusic;
 SoundFile deathNoise;
 
 //delcaring hero
-Player hero;
+actor hero;
 
 //delaring obstacles
 Obstacle[] obstacles = new Obstacle[300]; //As you may guess, yes, there are A LOT of obstacles.
@@ -18,8 +18,8 @@ Obstacle[] obstacles = new Obstacle[300]; //As you may guess, yes, there are A L
 //declaring global variables
 int timer = 0; //used for score and timing obstacles
 int deathCounter = 0; //used to track deaths (manually resetting counts as well)
-int highScore = 0; //creating counter used to show the player's highscore
-int fade = 0; //used to fade to dark when player wins
+int highScore = 0; //creating counter used to show the actor's highscore
+int fade = 0; //used to fade to dark when actor wins
 
 void setup(){
   size(1000, 600);
@@ -32,7 +32,7 @@ void setup(){
   deathNoise.rate(1.10); //changing the sampleRate, since processing seems to play it back a bit too slow
   deathNoise.amp(0.25); //controls the volume, 0.25 = 25 %
   //initialising hero
-  hero = new Player(150, 524, 50); //has x, y, and size parameters, the y and size should be left untouched 
+  hero = new actor(150, 524, 50); //has x, y, and size parameters, the y and size should be left untouched 
   //initialising obstacles
   for(int i = 0; i < 300; i++){
     obstacles[i] = new Obstacle(1000); //set to 1000, which is the right-most edge of the screen
@@ -89,7 +89,7 @@ void collision(){
   //collision with spike
   for(int i = 0; i < 300; i++){
     if(hero.getX() > obstacles[i].spikeGetX1() && hero.getX() < obstacles[i].spikeGetX2()){
-      if(hero._PlayerY > obstacles[i].spikeGetY1() && hero._PlayerY < obstacles[i].spikeGetY2()){
+      if(hero._actorY > obstacles[i].spikeGetY1() && hero._actorY < obstacles[i].spikeGetY2()){
         println("Death by Spike");
         backgroundMusic.stop();
         deathNoise.play();
@@ -99,15 +99,15 @@ void collision(){
     }
     //collision with square
     if(hero.getX() > obstacles[i].squareGetX1() && hero.getX() < obstacles[i].squareGetX2()){
-      //if player hits the front of the square
-      if(hero._PlayerY > obstacles[i].squareGetY1() && hero._PlayerY < obstacles[i].squareGetY2()){
+      //if actor hits the front of the square
+      if(hero._actorY > obstacles[i].squareGetY1() && hero._actorY < obstacles[i].squareGetY2()){
         println("Death by Square");
         backgroundMusic.stop();
         deathNoise.play();
         delay(1000);
         reset();
       }
-      if(hero.getY() < obstacles[i].squareGetY1()){ //if player hits top of the square
+      if(hero.getY() < obstacles[i].squareGetY1()){ //if actor hits top of the square
         hero._startY = obstacles[i].squareGetY1()-26;
       }
     }
