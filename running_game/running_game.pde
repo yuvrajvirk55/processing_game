@@ -1,30 +1,6 @@
-//Kristoffer Pauly
-//Game Project
-//The Somewhat Possible Game
+//Yuvraj Singh
 
-/*
-Notes:
-- This game is intended to be hard and frustrating. Ragequitting is very likely. Enjoy!
 
-- You have to click the window to actually be able to start playing,
-  which seems to be a problem with processing.
-  
-- The background melody is "Dance of the Pixies" by Jens Kiilstofte.
-
-- Thanks to my programming Sensei Ryan, without him the mystery of the
-  square collision would never have been solved.
-
-- You need to download the Sound library if it is not in your processing library already.
-
-- The obstacleSpawner is incredibly long, but it works, so you will unfortunately have 
-  to deal with it.
-  
-- There currently isn't any fix for the "ERROR: /node/free: Node n not found" that the sound
-  library is producing. However, it does not impede with the actually functions of the game,
-  so it has been left as is.
-*/
-
-//importing soundfile library
 import processing.sound.*;
 //declaring backgroundMusic
 SoundFile backgroundMusic;
