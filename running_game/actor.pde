@@ -38,11 +38,11 @@ class Obstacle{
     _squareX -= _speed;
   }
   
-  void ignore(){ //used to make Player object able to jump on square Obstacle
+  void ignore(){ //used to make enemy object able to jump on square Obstacle
     _ignore = true;
   }
   
-//get methods to use when checking for collision with Player object
+//get methods to use when checking for collision with enemy object
   //for the spike obstacle
   int spikeGetX1(){
     return _spikeX+5; //returns front coordinate of the spike 
