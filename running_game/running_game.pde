@@ -2,3 +2,5 @@
 
 import processing.sound.*;
 SoundFile file;
+
+actor indian_hero;
