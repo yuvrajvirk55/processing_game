@@ -1,38 +1,11 @@
-//Kristoffer Pauly
-//Game Project
-//The Somewhat Possible Game
-
-/*
-Notes:
-- This game is intended to be hard and frustrating. Ragequitting is very likely. Enjoy!
-
-- You have to click the window to actually be able to start playing,
-  which seems to be a problem with processing.
-  
-- The background melody is "Dance of the Pixies" by Jens Kiilstofte.
-
-- Thanks to my programming Sensei Ryan, without him the mystery of the
-  square collision would never have been solved.
-
-- You need to download the Sound library if it is not in your processing library already.
-
-- The enemySpawner is incredibly long, but it works, so you will unfortunately have 
-  to deal with it.
-  
-- There currently isn't any fix for the "ERROR: /node/free: Node n not found" that the sound
-  library is producing. However, it does not impede with the actually functions of the game,
-  so it has been left as is.
-*/
+//Yuvraj Singh
 
 
-
-//delcaring hero
+//actor
 actor hero;
 
 //delaring enemys
-enemy[] enemys = new enemy[300]; //As you may guess, yes, there are A LOT of enemys.
-//Note that not all 300 enemy objects are actually used, however, it's nice to have more than
-//necessary, just in case you want to add more enemys.
+enemy[] enemys = new enemy[100]; //number of enemys
 
 //declaring global variables
 int timer = 0; //used for score and timing enemys
