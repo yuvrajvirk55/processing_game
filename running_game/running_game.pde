@@ -27,7 +27,7 @@ Notes:
 
 
 //delcaring hero
-enemy hero;
+actor hero;
 
 //delaring obstacles
 Obstacle[] obstacles = new Obstacle[300]; //As you may guess, yes, there are A LOT of obstacles.
@@ -37,15 +37,15 @@ Obstacle[] obstacles = new Obstacle[300]; //As you may guess, yes, there are A L
 //declaring global variables
 int timer = 0; //used for score and timing obstacles
 int deathCounter = 0; //used to track deaths (manually resetting counts as well)
-int highScore = 0; //creating counter used to show the enemy's highscore
-int fade = 0; //used to fade to dark when enemy wins
+int highScore = 0; //creating counter used to show the actor's highscore
+int fade = 0; //used to fade to dark when actor wins
 
 void setup(){
   size(1000, 600);
   //initialising background music
 
   //initialising hero
-  hero = new enemy(150, 524, 50); //has x, y, and size parameters, the y and size should be left untouched 
+  hero = new actor(150, 524, 50); //has x, y, and size parameters, the y and size should be left untouched 
   //initialising obstacles
   for(int i = 0; i < 300; i++){
     obstacles[i] = new Obstacle(1000); //set to 1000, which is the right-most edge of the screen
@@ -102,7 +102,7 @@ void collision(){
   //collision with spike
   for(int i = 0; i < 300; i++){
     if(hero.getX() > obstacles[i].spikeGetX1() && hero.getX() < obstacles[i].spikeGetX2()){
-      if(hero._enemyY > obstacles[i].spikeGetY1() && hero._enemyY < obstacles[i].spikeGetY2()){
+      if(hero._actorY > obstacles[i].spikeGetY1() && hero._actorY < obstacles[i].spikeGetY2()){
         println("Death by Spike");
 
         delay(1000);
@@ -111,14 +111,14 @@ void collision(){
     }
     //collision with square
     if(hero.getX() > obstacles[i].squareGetX1() && hero.getX() < obstacles[i].squareGetX2()){
-      //if enemy hits the front of the square
-      if(hero._enemyY > obstacles[i].squareGetY1() && hero._enemyY < obstacles[i].squareGetY2()){
+      //if actor hits the front of the square
+      if(hero._actorY > obstacles[i].squareGetY1() && hero._actorY < obstacles[i].squareGetY2()){
         println("Death by Square");
 
         delay(1000);
         reset();
       }
-      if(hero.getY() < obstacles[i].squareGetY1()){ //if enemy hits top of the square
+      if(hero.getY() < obstacles[i].squareGetY1()){ //if actor hits top of the square
         hero._startY = obstacles[i].squareGetY1()-26;
       }
     }
