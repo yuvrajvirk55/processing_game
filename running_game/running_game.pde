@@ -16,13 +16,7 @@ int fade = 0; //used to fade to dark when actor wins
 void setup(){
   size(1000, 600);
   //initialising background music
-  backgroundMusic = new SoundFile(this, "Dance of the Pixies.mp3"); 
-  backgroundMusic.amp(0.25); //controls the volume, 0.25 = 25 %
-  backgroundMusic.play();
-  //initialising death noise
-  deathNoise = new SoundFile(this, "Death Noise.wav");
-  deathNoise.rate(1.10); //changing the sampleRate, since processing seems to play it back a bit too slow
-  deathNoise.amp(0.25); //controls the volume, 0.25 = 25 %
+ 
   //initialising hero
   hero = new actor(150, 524, 50); //has x, y, and size parameters, the y and size should be left untouched 
   //initialising enemys
