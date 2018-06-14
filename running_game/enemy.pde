@@ -2,7 +2,7 @@
 //Game Project
 //The Somewhat Possible Game
 
-class Obstacle{
+class enemy{
   //attributes
   int _startX;
   int _spikeX;
@@ -12,15 +12,15 @@ class Obstacle{
   int _speed;
   boolean _ignore;
   
-  Obstacle(int x){ //has only one argument, which startX, squareX and spikeX are all set according to
+  enemy(int x){ //has only one argument, which startX, squareX and spikeX are all set according to
     _startX = x;
     _squareX = _startX;
     _spikeX = _startX;
     _ignore = false;
   }
   
-  void spike(int y){ //spike obstacle (lethal from front and on top)
-    _spikeY = y; //the y coordinate of the obstacle, set according to the argument in the constructor
+  void spike(int y){ //spike enemy (lethal from front and on top)
+    _spikeY = y; //the y coordinate of the enemy, set according to the argument in the constructor
     strokeWeight(2);
     stroke(150);
     fill(0);
@@ -28,8 +28,8 @@ class Obstacle{
     _spikeX -= _speed;
   }
   
-  void square(int y){ //square obstacle (lethal from the front, safe on top)
-    _squareY = y; //the y coordinate of the obstacle, set according to the argument in the constructor
+  void square(int y){ //square enemy (lethal from the front, safe on top)
+    _squareY = y; //the y coordinate of the enemy, set according to the argument in the constructor
     rectMode(CENTER);
     strokeWeight(2);
     stroke(150);
@@ -38,12 +38,12 @@ class Obstacle{
     _squareX -= _speed;
   }
   
-  void ignore(){ //used to make actor object able to jump on square Obstacle
+  void ignore(){ //used to make actor object able to jump on square enemy
     _ignore = true;
   }
   
 //get methods to use when checking for collision with actor object
-  //for the spike obstacle
+  //for the spike enemy
   int spikeGetX1(){
     return _spikeX+5; //returns front coordinate of the spike 
   }
@@ -57,7 +57,7 @@ class Obstacle{
     return _spikeY; //returns bottom coordinate of the spike
   }
   
-  //for the square obstacle
+  //for the square enemy
   int squareGetX1(){ //returns front coordinate of the square
     return _squareX-25;
   }
@@ -71,7 +71,7 @@ class Obstacle{
     return _squareY+25;
   }
   
-  void move(int speed){ //determines the speed which the obstacles move along the x-axis with
+  void move(int speed){ //determines the speed which the enemys move along the x-axis with
     _speed = speed;
   }
 }

@@ -59,7 +59,7 @@ class actor{
     }
   }
   
-  //get methods to use when checking for collision with obstacles
+  //get methods to use when checking for collision with enemys
   int getX(){ 
     return _actorX + _actorSize/2; //returns the location of the actor's front coordinate
   }
