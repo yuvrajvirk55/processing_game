@@ -1,20 +1,12 @@
 //Yuvraj Singh
 
-
 import processing.sound.*;
-//declaring backgroundMusic
-SoundFile backgroundMusic;
-//declaring death noise
-SoundFile deathNoise;
 
-//delcaring hero
+//player
 actor hero;
 
 //delaring enemys
-enemy[] enemys = new enemy[300]; //As you may guess, yes, there are A LOT of enemys.
-//Note that not all 300 enemy objects are actually used, however, it's nice to have more than
-//necessary, just in case you want to add more enemys.
-
+enemy[] enemys = new enemy[200]; //number of enemy
 //declaring global variables
 int timer = 0; //used for score and timing enemys
 int deathCounter = 0; //used to track deaths (manually resetting counts as well)
