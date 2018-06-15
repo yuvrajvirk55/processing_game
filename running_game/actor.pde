@@ -1,6 +1,4 @@
-//Kristoffer Pauly
-//Game Project
-//The Somewhat Possible Game
+//Yuvraj Singh
 
 class actor{
   //attributes (affected by arguments)
