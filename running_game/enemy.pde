@@ -1,9 +1,6 @@
-//Kristoffer Pauly
-//Game Project
-//The Somewhat Possible Game
-
+//Yuvraj Singh
 class enemy{
-  //attributes
+  
   int _startX;
   int _spikeX;
   int _spikeY;
