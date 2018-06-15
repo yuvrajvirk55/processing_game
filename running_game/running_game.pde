@@ -75,7 +75,7 @@ void collision(){
   //collision with spike
   for(int i = 0; i < 300; i++){
     if(hero.getX() > enemys[i].spikeGetX1() && hero.getX() < enemys[i].spikeGetX2()){
-      if(hero._actorY > enemys[i].spikeGetY1() && hero._actorY < enemys[i].spikeGetY2()){
+      if(hero._y_coo_actor > enemys[i].spikeGetY1() && hero._y_coo_actor < enemys[i].spikeGetY2()){
         println("Death by Spike");
 
         delay(1000);
@@ -85,18 +85,18 @@ void collision(){
     //collision with square
     if(hero.getX() > enemys[i].squareGetX1() && hero.getX() < enemys[i].squareGetX2()){
       //if actor hits the front of the square
-      if(hero._actorY > enemys[i].squareGetY1() && hero._actorY < enemys[i].squareGetY2()){
+      if(hero._y_coo_actor > enemys[i].squareGetY1() && hero._y_coo_actor < enemys[i].squareGetY2()){
         println("Death by Square");
 
         delay(1000);
         reset();
       }
       if(hero.getY() < enemys[i].squareGetY1()){ //if actor hits top of the square
-        hero._startY = enemys[i].squareGetY1()-26;
+        hero._startY_actor = enemys[i].squareGetY1()-26;
       }
     }
     if(hero.getX() > enemys[i].squareGetX2() && !enemys[i]._ignore){ //resets the "floor" value
-      hero._startY = 524;
+      hero._startY_actor = 524;
       enemys[i].ignore(); //sets _ignore to true
     }
   }
@@ -118,7 +118,7 @@ void reset(){ //resets the game back to the beginning
     enemys[i] = new enemy(1000);
   }
   //resets "floor"
-  hero._startY = 524;
+  hero._startY_actor = 524;
   //increments death counter (used to track deaths)
   deathCounter += 1;
   //reset win fade
