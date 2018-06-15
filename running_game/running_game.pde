@@ -179,7 +179,7 @@ void scenery(){
   //ground
   strokeWeight(3);
   stroke(0);
-  fill(255, 50, 50, 150);
+  fill(255-mouseX, 50+mouseX, 50+mouseX, 150);
   rect(500, 600, 1050, 100);
 }
 
