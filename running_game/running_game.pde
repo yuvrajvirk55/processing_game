@@ -28,10 +28,10 @@ void draw(){
   
   //enemys
   for(int i = 0; i < 300; i++){
-    enemys[i].move(4); //initialises the move speed for all enemys
+    enemys[i].move(4); 
   }
-  enemySpawn(); //spawns the enemys (based on timer_timer_clock)
-  collision(); //checks collisions between enemys and hero
+  enemySpawn(); 
+  collision();
   
   //hero
   hero.display();
@@ -40,7 +40,7 @@ void draw(){
   //timer_timer_clock, scoreboard and control display
   timer_timer_clock();
   scoreboard(); 
-  displayControls();
+  display_actor_Controls();
 }
 
 void keyPressed(){
@@ -137,7 +137,7 @@ void scoreboard(){ //scoreboard that tracks longest travelled distance
   text(deathClock_count, 500, 60);
 }
 
-void displayControls(){
+void display_actor_Controls(){
   //displays controls until the timer_timer_clock reaches 250, i.e. until encountering the first enemy
   if(timer_timer_clock < 250){
     textAlign(CENTER);
