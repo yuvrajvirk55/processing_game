@@ -9,15 +9,15 @@ class enemy{
   int _race;
   boolean _ignore;
   
-  enemy(int x){ //has only one argument, which startX, squareX and spikeX are all set according to
+  enemy(int x){
     _startpoint = x;
     _squre_pointx = _startpoint;
     _sp_pointx = _startpoint;
     _ignore = false;
   }
   
-  void spike(int y){ //spike enemy (lethal from front and on top)
-    _sp_pointy = y; //the y coordinate of the enemy, set according to the argument in the constructor
+  void spike(int y){ //spike enemy
+    _sp_pointy = y; //the y coordinate of the enemy
     strokeWeight(2);
     stroke(150);
     fill(random(0,355));
