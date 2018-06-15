@@ -1,11 +1,11 @@
 //Yuvraj Singh
 
 class actor{
-  //attributes (affected by arguments)
-  int _actorX; //x position of the actor object
-  int _actorY; //y position of the actor object
-  int _actorSize; //size of the actor object
-  int _startY; //starting y position of the actor object, used to determine where the "floor" is
+  
+  int _actorX; //x position 
+  int _actorY; //y position
+  int _actorSize; //size o
+  int _startY; 
   
   //attributes (not affected by arguments)
   int gravity = 6; //gravity that the actor object is affected by
