@@ -154,27 +154,27 @@ void displayControls(){
 
 void scenery(){
   noStroke();
-  fill(205, 120, 0);
+  fill(205, 120, 0+mouseX);
   rect(500, 300, 1500, 1500);
-  fill(210, 125, 5);
+  fill(210, 125, 5+mouseX);
   rect(500, 600, 1400, 1400);
-  fill(215, 130, 10);
+  fill(215, 130, 10+mouseX);
   rect(500, 600, 1300, 1300);
-  fill(220, 135, 15);
+  fill(220, 135, 15+mouseX);
   rect(500, 600, 1200, 1200);
-  fill(225, 140, 20);
+  fill(225, 140, 20+mouseX);
   rect(500, 600, 1100, 1100);
-  fill(230, 145, 25);
+  fill(230, 145, 25+mouseX);
   rect(500, 600, 1000, 1000);
-  fill(235, 150, 30);
+  fill(235, 150, 30+mouseX);
   rect(500, 600, 900, 900);
-  fill(240, 155, 35);
+  fill(240, 155, 35+mouseX);
   rect(500, 600, 800, 800);
-  fill(245, 160, 40);
+  fill(245, 160, 40+mouseX);
   rect(500, 600, 700, 700);
-  fill(250, 165, 45);
+  fill(250, 165, 45+mouseX);
   rect(500, 600, 600, 600);
-  fill(255, 170, 50);
+  fill(255, 170, 50+mouseX);
   rect(500, 600, 500, 500);
   //ground
   strokeWeight(3);
