@@ -44,25 +44,25 @@ class actor{
       _actorY -= 12; //increments the y position o
       jumpCounter += 1; //increments the jumpCounter
     }
-    if(jumpCounter >= jumpCounterLimit){ //when the counter reaches the limit the jump stops
+    if(jumpCounter >= jumpCounterLimit){ 
       isJumping = false;
-      jumpCounter = 0; //the counter is reset
+      jumpCounter = 0; 
     }
     //spin while in air
     if(!notInAir){
-      jumpAngle += incrementAngle; //increments the jumpAngle, activating the rotate in "display()"
+      jumpAngle += incrementAngle; 
     }
     if(notInAir){
-      jumpAngle = 0; //reset the jumpAngle so that the actor object is always even when on the "floor"
+      jumpAngle = 0; 
     }
   }
   
-  //get methods to use when checking for collision with enemys
+  
   int getX(){ 
-    return _actorX + _actorSize/2; //returns the location of the actor's front coordinate
+    return _actorX + _actorSize/2; // location of the actor's front coordinate
   }
   int getY(){
-    return _actorY + _actorSize/2; //returns the location of the actors's bottom coordinate
+    return _actorY + _actorSize/2; // location of the actors's bottom coordinate
   }
 
   void display(){ //is put into "draw()" to constantly update
