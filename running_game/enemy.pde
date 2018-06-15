@@ -36,13 +36,12 @@ class enemy{
     _sp_pointx -= _race;
   }
   
-  void square(int y){ //square enemy (lethal from the front, safe on top)
-    _squre_pointy = y; //the y coordinate of the enemy, set according to the argument in the constructor
+  void square(int y){ 
+    _squre_pointy = y; //the y coordinate of the enemy
     rectMode(CENTER);
     strokeWeight(2);
     stroke(150);
     fill(0,random(10,300),random(30,340));
-   // rect(_squre_pointx, _squre_pointy, 50, 50); 
     ellipse(_squre_pointx, _squre_pointy, 100, 30);
     _squre_pointx -= _race;
   }
