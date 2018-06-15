@@ -13,20 +13,20 @@ class actor{
   int jumpCounterLimit = 20; 
   boolean isJumping = false; 
   float jumpAngle = 0; 
-  float incrementAngle = PI/20; //the increment at which the jumpAngle will be changed when jumping
-  boolean notInAir = true; //used to determine when actor object is allowed to jump
+  float incrementAngle = PI/20;
+  boolean notInAir = true; 
 
-  actor(int x, int y, int size){ //the actor object has three arguments x & y position and size
-    //settings attributes to be equal to arguments that are passed in
+  actor(int x, int y, int size){ 
+    
     _actorX = x;
     _actorY = y;
     _actorSize = size;
-    _startY = y; //used to determine when gravity is active
+    _startY = y; 
   }
   
-  void jump(){ //makes the actor jump, this will be controlled by the person playing the game
-    if(notInAir){ //if the actor is on the ground == true
-      isJumping = true; //sets boolean to true, which triggers the jump in "physics()" 
+  void jump(){ 
+    if(notInAir){ 
+      isJumping = true; //sets boolean to true, which triggers the jump 
     }
   }
   
