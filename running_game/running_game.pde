@@ -128,13 +128,12 @@ void scoreboard_to_display(){
 }
 
 void display_actor_Controls(){
-  //displays controls until the timer_timer_clock reaches 250, i.e. until encountering the first enemy
   if(timer_timer_clock < 250){
     textAlign(CENTER);
-    textSize(35);
+    textSize(25);
     fill(0);
-    text("JUMP: UP, W or SPACE", 220, 50);
-  }else{ //displays current score
+    text("JUMP: Press UP or SPACE", 220, 50);
+  }else{ 
     textAlign(CENTER);
     textSize(35);
     fill(0);
