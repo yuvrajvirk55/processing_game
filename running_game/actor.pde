@@ -5,7 +5,7 @@ class actor{
   int _x_coo_actor; //x position 
   int _y_coo_actor; //y position
   int _size_actor; //size o
-  int _startY; 
+  int _startY_actor; 
   
   
   int _gravity_actor = 6; 
@@ -21,7 +21,7 @@ class actor{
     _x_coo_actor = x;
     _y_coo_actor = y;
     _size_actor = size;
-    _startY = y; 
+    _startY_actor = y; 
   }
   
   void jump(){ 
@@ -32,7 +32,7 @@ class actor{
   
   void physics(){ 
     //_gravity_actor
-    if(_y_coo_actor < _startY){ 
+    if(_y_coo_actor < _startY_actor){ 
       _y_coo_actor += _gravity_actor; //increment actor object's y position by _gravity_actor
       notInAir = false; //actor object is not in the air
     }else{
