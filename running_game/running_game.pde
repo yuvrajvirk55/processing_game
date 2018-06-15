@@ -6,18 +6,17 @@ actor hero;
 //delaring enemys
 enemy[] enemys = new enemy[300]; //number of enemys
 
-int timer_timer_clock = 0; //used for score and timing enemys
-int deathClock_count = 0; //used to track deaths (manually resetting counts as well)
-int maxScore = 0; //creating counter used to show the actor's maxScore
-int fade = 0; //used to fade to dark when actor wins
+int timer_timer_clock = 0; //used for score 
+int deathClock_count = 0; 
+int maxScore = 0; 
+int fade = 0; 
 
 void setup(){
   size(1000, 600);
-  //initialising background music
-
-  //initialising hero
-  hero = new actor(150, 524, 50); //has x, y, and size parameters, the y and size should be left untouched 
-  //initialising enemys
+   //initialising hero
+  hero = new actor(150, 524, 50); 
+  
+  //enemys
   for(int i = 0; i < 300; i++){
     enemys[i] = new enemy(1000); //set to 1000, which is the right-most edge of the screen
   }
