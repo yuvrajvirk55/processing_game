@@ -6,6 +6,9 @@ actor hero;
 //delaring enemys
 enemy[] enemys = new enemy[300]; //number of enemys
 
+//adding snow
+snow[] snowballs = new snow[200];
+
 int timer_timer_clock = 0; //used for score 
 int deathClock_count = 0; 
 int maxScore = 0; 
@@ -1352,9 +1355,9 @@ void enemySpawn(){
   if(timer_timer_clock > 11770){ 
     enemys[211].square(525);
   }
-  //===============(END)===============
-  if(timer_timer_clock > 11800){ //completed the game
+
+  if(timer_timer_clock > 11800){ 
     gameComplete();
   }
-  //===============(12000 = 200s)===============
+ 
 }
