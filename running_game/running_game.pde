@@ -187,7 +187,7 @@ void gameComplete(){
 }
 
 void enemySpawn(){ 
-
+ //<>//
   if(timer_timer_clock > 150){
     enemys[1].spike(550);
   }
@@ -210,7 +210,7 @@ void enemySpawn(){
   if(timer_timer_clock > 675){
     enemys[7].spike(550);
   }
-
+ 
   if(timer_timer_clock > 750){
     enemys[1].square(525);
   }
@@ -220,15 +220,17 @@ void enemySpawn(){
   if(timer_timer_clock > 810){
     enemys[3].square(425);
   }
-
+  if(timer_timer_clock > 845){
+    enemys[4].square(375);
+  }
   if(timer_timer_clock > 850){
     enemys[9].spike(550);
+ 
+  }
+  if(timer_timer_clock > 880){
+    enemys[5].square(375);
   }
  
-  if(timer_timer_clock > 874){
-    enemys[12].spike(550);
-  }
-  
   if(timer_timer_clock > 930){ 
     enemys[6].square(375);
   }
