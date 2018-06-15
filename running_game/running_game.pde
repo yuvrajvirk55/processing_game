@@ -7,7 +7,7 @@ actor hero;
 enemy[] enemys = new enemy[300]; //number of enemys
 
 int timer_timer_clock = 0; //used for score and timing enemys
-int deathCounter = 0; //used to track deaths (manually resetting counts as well)
+int deathClock_count = 0; //used to track deaths (manually resetting counts as well)
 int highScore = 0; //creating counter used to show the actor's highscore
 int fade = 0; //used to fade to dark when actor wins
 
@@ -118,7 +118,7 @@ void reset(){ //resets the game back to the beginning
   //resets "floor"
   hero._startY_actor = 524;
   //increments death counter (used to track deaths)
-  deathCounter += 1;
+  deathClock_count += 1;
   //reset win fade
   fade = 0;
 }
@@ -135,7 +135,7 @@ void scoreboard(){ //scoreboard that tracks longest travelled distance
   //death counter display
   fill(255);
   textSize(45);
-  text(deathCounter, 500, 60);
+  text(deathClock_count, 500, 60);
 }
 
 void displayControls(){
