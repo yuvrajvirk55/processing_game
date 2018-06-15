@@ -46,12 +46,11 @@ class enemy{
     _squre_pointx -= _race;
   }
   
-  void ignore(){ //used to make actor object able to jump on square enemy
+  void ignore(){ 
     _ignore = true;
   }
   
-//get methods to use when checking for collision with actor object
-  //for the spike enemy
+
   int spikeGetX1(){
     return _sp_pointx+5; //returns front coordinate of the spike 
   }
@@ -72,14 +71,14 @@ class enemy{
   int squareGetX2(){ //returns back coordinate of the square
     return _squre_pointx+75;
   }
-  int squareGetY1(){ //returns top coordinate of the square
+  int squareGetY1(){ //returns top coordinate
     return _squre_pointy-25;
   }
-  int squareGetY2(){ //returns bottom coordinate of the square
+  int squareGetY2(){ //returns bottom coordinate
     return _squre_pointy+25;
   }
   
-  void move(int speed){ //determines the speed which the enemys move along the x-axis with
+  void move(int speed){ 
     _race = speed;
   }
 }
