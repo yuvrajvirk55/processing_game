@@ -5,7 +5,7 @@
 actor hero;
 
 //delaring enemys
-enemy[] enemys = new enemy[100]; //number of enemys
+enemy[] enemys = new enemy[300]; //number of enemys
 
 //declaring global variables
 int timer = 0; //used for score and timing enemys
