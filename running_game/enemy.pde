@@ -21,9 +21,13 @@ class enemy{
     strokeWeight(2);
     stroke(150);
     fill(0);
-    triangle(_spikeX, _spikeY, _spikeX+30, _spikeY, _spikeX+15, _spikeY-60);
-    rect(_spikeX+15, _spikeY-20,80,10);
-    ellipse(_spikeX+15, _spikeY-15,30,50);
+    triangle(_spikeX, _spikeY, _spikeX+30, _spikeY, _spikeX+15, _spikeY-70);
+    rect(_spikeX+15, _spikeY-30,80,10);
+    rect(_spikeX+25, _spikeY-10,10,50);
+    rect(_spikeX+5, _spikeY-10,10,50);
+    ellipse(_spikeX+15, _spikeY-25,30,50);
+    ellipse(_spikeX+15, _spikeY-50,17,20);
+    
     
     _spikeX -= _speed;
   }
