@@ -20,12 +20,16 @@ class enemy{
     _spikeY = y; //the y coordinate of the enemy, set according to the argument in the constructor
     strokeWeight(2);
     stroke(150);
-    fill(0);
+    fill(random(0,355));
     triangle(_spikeX, _spikeY, _spikeX+30, _spikeY, _spikeX+15, _spikeY-70);
+        fill(0,random(0,355),random(0,355));
     rect(_spikeX+15, _spikeY-30,80,10);
+       fill(random(0,355),0,random(0,355));
     rect(_spikeX+25, _spikeY-10,10,50);
     rect(_spikeX+5, _spikeY-10,10,50);
+       fill(random(0,355),random(0,355),0);
     ellipse(_spikeX+15, _spikeY-25,30,50);
+    fill(random(0,355),random(0,355),random(0,355));
     ellipse(_spikeX+15, _spikeY-50,17,20);
     
     
