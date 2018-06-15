@@ -45,12 +45,7 @@ void draw(){
 
 void keyPressed(){
   switch(key){
-    //jump (using W)
-  case 'w': //when 'w' is pressed
-    hero.jump();
-    break;
-    
-    //jump (using Spacebar)
+   //jump (using Spacebar)
   case ' ': //when spacebar is pressed
     hero.jump();
     break;
