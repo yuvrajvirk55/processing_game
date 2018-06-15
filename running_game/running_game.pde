@@ -23,11 +23,22 @@ void setup(){
   for(int i = 0; i < 300; i++){
     enemys[i] = new enemy(1000); 
   }
+   for (int i=0;i<200;i++)
+  {
+    snowballs[i] = new snow();
+  }
+  
 }
 
 void draw(){
   //background
   scenery();
+  
+  for (int i=0;i<200-mouseX;i++)
+  {
+    snowballs[i].snowappear();
+    snowballs[i].snowfall(); 
+  }
   
   //enemys
   for(int i = 0; i < 300; i++){
