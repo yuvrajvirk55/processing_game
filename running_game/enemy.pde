@@ -3,7 +3,7 @@ class enemy{
   
   int _startpoint;
   int _sp_pointx;
-  int _spikeY;
+  int _sp_pointy;
   int _squareX;
   int _squareY;
   int _speed;
@@ -17,20 +17,20 @@ class enemy{
   }
   
   void spike(int y){ //spike enemy (lethal from front and on top)
-    _spikeY = y; //the y coordinate of the enemy, set according to the argument in the constructor
+    _sp_pointy = y; //the y coordinate of the enemy, set according to the argument in the constructor
     strokeWeight(2);
     stroke(150);
     fill(random(0,355));
-    triangle(_sp_pointx, _spikeY, _sp_pointx+30, _spikeY, _sp_pointx+15, _spikeY-70);
+    triangle(_sp_pointx, _sp_pointy, _sp_pointx+30, _sp_pointy, _sp_pointx+15, _sp_pointy-70);
         fill(0,random(0,355),random(0,355));
-    rect(_sp_pointx+15, _spikeY-30,80,10);
+    rect(_sp_pointx+15, _sp_pointy-30,80,10);
        fill(random(0,355),0,random(0,355));
-    rect(_sp_pointx+25, _spikeY-10,10,50);
-    rect(_sp_pointx+5, _spikeY-10,10,50);
+    rect(_sp_pointx+25, _sp_pointy-10,10,50);
+    rect(_sp_pointx+5, _sp_pointy-10,10,50);
        fill(random(0,355),random(0,355),0);
-    ellipse(_sp_pointx+15, _spikeY-25,30,50);
+    ellipse(_sp_pointx+15, _sp_pointy-25,30,50);
     fill(random(0,355),random(0,355),random(0,355));
-    ellipse(_sp_pointx+15, _spikeY-50,17,20);
+    ellipse(_sp_pointx+15, _sp_pointy-50,17,20);
     
     
     _sp_pointx -= _speed;
@@ -60,10 +60,10 @@ class enemy{
     return _sp_pointx+75; //returns back coordinate of the spike 
   }
   int spikeGetY1(){
-    return _spikeY-50; //returns top coordinate of the spike
+    return _sp_pointy-50; //returns top coordinate of the spike
   }
   int spikeGetY2(){
-    return _spikeY; //returns bottom coordinate of the spike
+    return _sp_pointy; //returns bottom coordinate of the spike
   }
   
   //for the square enemy
