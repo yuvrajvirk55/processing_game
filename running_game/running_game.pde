@@ -173,26 +173,21 @@ void scenery(){
 }
 
 void gameComplete(){
-  //fades to black by acting as an increasing alpha for the rect that covers the screen
+ 
   noStroke();
   fill(0, 0, 0, fade);
   rectMode(CENTER);
   rect(500, 300, 1000, 600);
   fade += 1;
-  //you win text
+  
   textAlign(CENTER);
   textSize(50);
   fill(random(255), random(255), random(255));
-  text("You Win!", 500, 300);
+  text("Congoooo!!!", 500, 300);
 }
 
-void enemySpawn(){ //spawns the enemys based on the timer_timer_clock (this part of the code is incredibly long)
-/*
-Notes to self: 
-- floor is 525 (square) and 550 (spike)
-- good timer_timer_clock distance for linked objects 12 (square) and 8 (spike)
-- nearly 1200 lines of code for this part D:
-*/
+void enemySpawn(){ 
+
   if(timer_timer_clock > 150){
     enemys[1].spike(550);
   }
@@ -215,9 +210,7 @@ Notes to self:
   if(timer_timer_clock > 675){
     enemys[7].spike(550);
   }
-  if(timer_timer_clock > 682){
-    enemys[8].spike(550);
-  }
+
   if(timer_timer_clock > 750){
     enemys[1].square(525);
   }
@@ -227,27 +220,15 @@ Notes to self:
   if(timer_timer_clock > 810){
     enemys[3].square(425);
   }
-  if(timer_timer_clock > 845){
-    enemys[4].square(375);
-  }
+
   if(timer_timer_clock > 850){
     enemys[9].spike(550);
   }
-  if(timer_timer_clock > 858){
-    enemys[10].spike(550);
-  }
-  if(timer_timer_clock > 866){
-    enemys[11].spike(550);
-  }
+ 
   if(timer_timer_clock > 874){
     enemys[12].spike(550);
   }
-  if(timer_timer_clock > 880){
-    enemys[5].square(375);
-  }
-  if(timer_timer_clock > 882){
-    enemys[13].spike(550);
-  }
+  
   if(timer_timer_clock > 930){ 
     enemys[6].square(375);
   }
