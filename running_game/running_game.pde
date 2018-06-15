@@ -76,14 +76,13 @@ void collision_with_human(){
     }
     //collision with square
     if(hero.getX() > enemys[i].squareGetX1() && hero.getX() < enemys[i].squareGetX2()){
-      //if actor hits the front of the square
       if(hero._y_coo_actor > enemys[i].squareGetY1() && hero._y_coo_actor < enemys[i].squareGetY2()){
-        println("Death by Square");
+        println("Death");
 
         delay(1000);
         reset();
       }
-      if(hero.getY() < enemys[i].squareGetY1()){ //if actor hits top of the square
+      if(hero.getY() < enemys[i].squareGetY1()){ 
         hero._startY_actor = enemys[i].squareGetY1()-26;
       }
     }
@@ -94,10 +93,9 @@ void collision_with_human(){
   }
 }
 
-void timer_timer_clock(){ //timer_timer_clock used to determine score and enemy spawning
-//Note to self: song length is 12000 on the timer_timer_clock
+void timer_timer_clock(){ 
   timer_timer_clock += 1;
-  //println(timer_timer_clock); //print of the timer_timer_clock, useful for when you are adding enemys in the spawner
+  
 }
 
 void reset(){ //resets the game back to the beginning
