@@ -41,8 +41,9 @@ class enemy{
     rectMode(CENTER);
     strokeWeight(2);
     stroke(150);
-    fill(0);
-    rect(_squareX, _squareY, 50, 50); 
+    fill(0,random(10,300),random(30,340));
+   // rect(_squareX, _squareY, 50, 50); 
+    ellipse(_squareX, _squareY, 100, 30);
     _squareX -= _speed;
   }
   
