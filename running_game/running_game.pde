@@ -66,6 +66,33 @@ void draw(){
   sun();
 }
 
+
+void sun()
+  {
+   if(mouseX<50)
+   {
+   fill(255);
+   }
+   else
+    fill(10+mouseX,0,201-mouseX);
+    
+    ellipse(350,100,50,50);
+  }
+  
+  
+  void path()
+  {
+    fill(0+mouseX,0+mouseX/5,0+mouseX);
+    ellipse(x,395,10,10);
+    //pushMatrix();
+    ellipse(x,410,20,20);
+   // popMatrix();
+     ellipse(x+5,425,5,10);
+      ellipse(x-5,425,5,10);
+    
+   }
+   
+   
 void keyPressed(){
   switch(key){
     //jump (using W)
