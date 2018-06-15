@@ -1,8 +1,8 @@
 //Yuvraj Singh
 class enemy{
   
-  int _startX;
-  int _spikeX;
+  int _startpoint;
+  int _sp_pointx;
   int _spikeY;
   int _squareX;
   int _squareY;
@@ -10,9 +10,9 @@ class enemy{
   boolean _ignore;
   
   enemy(int x){ //has only one argument, which startX, squareX and spikeX are all set according to
-    _startX = x;
-    _squareX = _startX;
-    _spikeX = _startX;
+    _startpoint = x;
+    _squareX = _startpoint;
+    _sp_pointx = _startpoint;
     _ignore = false;
   }
   
@@ -21,19 +21,19 @@ class enemy{
     strokeWeight(2);
     stroke(150);
     fill(random(0,355));
-    triangle(_spikeX, _spikeY, _spikeX+30, _spikeY, _spikeX+15, _spikeY-70);
+    triangle(_sp_pointx, _spikeY, _sp_pointx+30, _spikeY, _sp_pointx+15, _spikeY-70);
         fill(0,random(0,355),random(0,355));
-    rect(_spikeX+15, _spikeY-30,80,10);
+    rect(_sp_pointx+15, _spikeY-30,80,10);
        fill(random(0,355),0,random(0,355));
-    rect(_spikeX+25, _spikeY-10,10,50);
-    rect(_spikeX+5, _spikeY-10,10,50);
+    rect(_sp_pointx+25, _spikeY-10,10,50);
+    rect(_sp_pointx+5, _spikeY-10,10,50);
        fill(random(0,355),random(0,355),0);
-    ellipse(_spikeX+15, _spikeY-25,30,50);
+    ellipse(_sp_pointx+15, _spikeY-25,30,50);
     fill(random(0,355),random(0,355),random(0,355));
-    ellipse(_spikeX+15, _spikeY-50,17,20);
+    ellipse(_sp_pointx+15, _spikeY-50,17,20);
     
     
-    _spikeX -= _speed;
+    _sp_pointx -= _speed;
   }
   
   void square(int y){ //square enemy (lethal from the front, safe on top)
@@ -54,10 +54,10 @@ class enemy{
 //get methods to use when checking for collision with actor object
   //for the spike enemy
   int spikeGetX1(){
-    return _spikeX+5; //returns front coordinate of the spike 
+    return _sp_pointx+5; //returns front coordinate of the spike 
   }
   int spikeGetX2(){
-    return _spikeX+75; //returns back coordinate of the spike 
+    return _sp_pointx+75; //returns back coordinate of the spike 
   }
   int spikeGetY1(){
     return _spikeY-50; //returns top coordinate of the spike
