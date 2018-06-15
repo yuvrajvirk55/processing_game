@@ -6,7 +6,7 @@ actor hero;
 
 //delaring enemys
 enemy[] enemys = new enemy[300]; //number of enemys
-
+snow[] snowballs = new snow[200];
 //declaring global variables
 int clock = 0; //used for score and timing enemys
 int deathCounter = 0; //used to track deaths (manually resetting counts as well)
@@ -16,6 +16,10 @@ int fade = 0; //used to fade to dark when actor wins
 void setup(){
   size(1000, 600);
   //initialising background music
+for (int i=0;i<200;i++)
+  {
+    snowballs[i] = new snow();
+  }
 
   //initialising hero
   hero = new actor(150, 524, 50); //has x, y, and size parameters, the y and size should be left untouched 
@@ -29,6 +33,7 @@ void draw(){
   //background
   scenery();
   
+ 
   //enemys
   for(int i = 0; i < 300; i++){
     enemys[i].move(4); //initialises the move speed for all enemys
@@ -44,6 +49,21 @@ void draw(){
   clock();
   scoreboard(); 
   displayControls();
+  
+  
+  background(84+mouseX,207,204-mouseX); 
+  
+  fill(0+mouseX/2,0+mouseX,0+mouseX/2);
+   rect(0,430,500,100);
+   
+   for (int i=0;i<200-mouseX;i++)
+  {
+    snowballs[i].snowappear();
+    snowballs[i].snowfall(); 
+  }
+  
+  path();
+  sun();
 }
 
 void keyPressed(){
