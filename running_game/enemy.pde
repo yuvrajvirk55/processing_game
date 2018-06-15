@@ -5,7 +5,7 @@ class enemy{
   int _sp_pointx;
   int _sp_pointy;
   int _squre_pointx;
-  int _squareY;
+  int _squre_pointy;
   int _speed;
   boolean _ignore;
   
@@ -37,13 +37,13 @@ class enemy{
   }
   
   void square(int y){ //square enemy (lethal from the front, safe on top)
-    _squareY = y; //the y coordinate of the enemy, set according to the argument in the constructor
+    _squre_pointy = y; //the y coordinate of the enemy, set according to the argument in the constructor
     rectMode(CENTER);
     strokeWeight(2);
     stroke(150);
     fill(0,random(10,300),random(30,340));
-   // rect(_squre_pointx, _squareY, 50, 50); 
-    ellipse(_squre_pointx, _squareY, 100, 30);
+   // rect(_squre_pointx, _squre_pointy, 50, 50); 
+    ellipse(_squre_pointx, _squre_pointy, 100, 30);
     _squre_pointx -= _speed;
   }
   
@@ -74,10 +74,10 @@ class enemy{
     return _squre_pointx+75;
   }
   int squareGetY1(){ //returns top coordinate of the square
-    return _squareY-25;
+    return _squre_pointy-25;
   }
   int squareGetY2(){ //returns bottom coordinate of the square
-    return _squareY+25;
+    return _squre_pointy+25;
   }
   
   void move(int speed){ //determines the speed which the enemys move along the x-axis with
