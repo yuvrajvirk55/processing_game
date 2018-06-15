@@ -12,7 +12,7 @@ class actor{
   int jumptime = 0; 
   int jumptimeLimit = 20; 
   boolean isJumping = false; 
-  float jumpAngle = 0; 
+  float jump_angle_inair = 0; 
   float incrementAngle = PI/20;
   boolean notInAir = true; 
 
@@ -50,10 +50,10 @@ class actor{
     }
     //spin while in air
     if(!notInAir){
-      jumpAngle += incrementAngle; 
+      jump_angle_inair += incrementAngle; 
     }
     if(notInAir){
-      jumpAngle = 0; 
+      jump_angle_inair = 0; 
     }
   }
   
@@ -70,7 +70,7 @@ class actor{
     
     rectMode(CENTER); 
     translate(_x_coo_actor, _y_coo_actor); 
-    rotate(jumpAngle); 
+    rotate(jump_angle_inair); 
     
   
     strokeWeight(2);
