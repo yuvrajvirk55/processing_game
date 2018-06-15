@@ -23,7 +23,7 @@ class enemy{
     fill(0);
     triangle(_spikeX, _spikeY, _spikeX+30, _spikeY, _spikeX+15, _spikeY-50);
     ellipse(_spikeX+15, _spikeY-5,30,50);
-    rect();
+    rect(_spikeX+5, _spikeY-10,50,10);
     _spikeX -= _speed;
   }
   
