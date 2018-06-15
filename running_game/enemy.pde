@@ -52,23 +52,23 @@ class enemy{
   
 
   int spikeGetX1(){
-    return _sp_pointx+5; //returns front coordinate of the spike 
+    return _sp_pointx+5; //returns front coordinate
   }
   int spikeGetX2(){
-    return _sp_pointx+75; //returns back coordinate of the spike 
+    return _sp_pointx+75; //returns back coordinate
   }
   int spikeGetY1(){
-    return _sp_pointy-50; //returns top coordinate of the spike
+    return _sp_pointy-50; //returns top coordinate
   }
   int spikeGetY2(){
-    return _sp_pointy; //returns bottom coordinate of the spike
+    return _sp_pointy; //returns bottom coordinate 
   }
   
   //for the square enemy
-  int squareGetX1(){ //returns front coordinate of the square
+  int squareGetX1(){ //returns front coordinate
     return _squre_pointx-25;
   }
-  int squareGetX2(){ //returns back coordinate of the square
+  int squareGetX2(){ //returns back 
     return _squre_pointx+75;
   }
   int squareGetY1(){ //returns top coordinate
