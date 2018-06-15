@@ -4,14 +4,14 @@ class enemy{
   int _startpoint;
   int _sp_pointx;
   int _sp_pointy;
-  int _squareX;
+  int _squre_pointx;
   int _squareY;
   int _speed;
   boolean _ignore;
   
   enemy(int x){ //has only one argument, which startX, squareX and spikeX are all set according to
     _startpoint = x;
-    _squareX = _startpoint;
+    _squre_pointx = _startpoint;
     _sp_pointx = _startpoint;
     _ignore = false;
   }
@@ -42,9 +42,9 @@ class enemy{
     strokeWeight(2);
     stroke(150);
     fill(0,random(10,300),random(30,340));
-   // rect(_squareX, _squareY, 50, 50); 
-    ellipse(_squareX, _squareY, 100, 30);
-    _squareX -= _speed;
+   // rect(_squre_pointx, _squareY, 50, 50); 
+    ellipse(_squre_pointx, _squareY, 100, 30);
+    _squre_pointx -= _speed;
   }
   
   void ignore(){ //used to make actor object able to jump on square enemy
@@ -68,10 +68,10 @@ class enemy{
   
   //for the square enemy
   int squareGetX1(){ //returns front coordinate of the square
-    return _squareX-25;
+    return _squre_pointx-25;
   }
   int squareGetX2(){ //returns back coordinate of the square
-    return _squareX+75;
+    return _squre_pointx+75;
   }
   int squareGetY1(){ //returns top coordinate of the square
     return _squareY-25;
