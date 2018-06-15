@@ -112,16 +112,16 @@ void reset(){
   fade = 0;
 }
 
-void scoreboard_to_display(){ //scoreboard that tracks longest travelled distance
+void scoreboard_to_display(){ 
   if(timer_timer_clock > maxScore){
     maxScore = timer_timer_clock;
   }
   textAlign(CENTER);
-  //maxScore display
-  textSize(35);
+ 
+  textSize(40);
   fill(0);
-  text("maxScore: "+maxScore/60, 800, 50); //maxScore is divided by 60 so each second = 1 point
-  //death counter display
+  text("Run Score: "+maxScore/60, 800, 50); 
+  
   fill(255);
   textSize(45);
   text(deathClock_count, 500, 60);
