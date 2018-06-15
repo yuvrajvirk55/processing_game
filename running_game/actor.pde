@@ -3,7 +3,7 @@
 class actor{
   
   int _x_coo_actor; //x position 
-  int _actorY; //y position
+  int _y_coo_actor; //y position
   int _actorSize; //size o
   int _startY; 
   
@@ -19,7 +19,7 @@ class actor{
   actor(int x, int y, int size){ 
     
     _x_coo_actor = x;
-    _actorY = y;
+    _y_coo_actor = y;
     _actorSize = size;
     _startY = y; 
   }
@@ -32,8 +32,8 @@ class actor{
   
   void physics(){ 
     //gravity
-    if(_actorY < _startY){ 
-      _actorY += gravity; //increment actor object's y position by gravity
+    if(_y_coo_actor < _startY){ 
+      _y_coo_actor += gravity; //increment actor object's y position by gravity
       notInAir = false; //actor object is not in the air
     }else{
       notInAir = true; 
@@ -41,7 +41,7 @@ class actor{
     
   
     if(isJumping){
-      _actorY -= 12; //increments the y position o
+      _y_coo_actor -= 12; //increments the y position o
       jumpCounter += 1; //increments the jumpCounter
     }
     if(jumpCounter >= jumpCounterLimit){ 
@@ -62,14 +62,14 @@ class actor{
     return _x_coo_actor + _actorSize/2; // location of the actor's front coordinate
   }
   int getY(){
-    return _actorY + _actorSize/2; // location of the actors's bottom coordinate
+    return _y_coo_actor + _actorSize/2; // location of the actors's bottom coordinate
   }
 
   void display(){ 
     pushMatrix(); 
     
     rectMode(CENTER); 
-    translate(_x_coo_actor, _actorY); 
+    translate(_x_coo_actor, _y_coo_actor); 
     rotate(jumpAngle); 
     
   
