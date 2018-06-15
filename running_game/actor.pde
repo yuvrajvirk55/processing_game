@@ -9,8 +9,8 @@ class actor{
   
   
   int _gravity_actor = 6; 
-  int jumpCounter = 0; 
-  int jumpCounterLimit = 20; 
+  int jumptime = 0; 
+  int jumptimeLimit = 20; 
   boolean isJumping = false; 
   float jumpAngle = 0; 
   float incrementAngle = PI/20;
@@ -42,11 +42,11 @@ class actor{
   
     if(isJumping){
       _y_coo_actor -= 12; //increments the y position o
-      jumpCounter += 1; //increments the jumpCounter
+      jumptime += 1; //increments the jumptime
     }
-    if(jumpCounter >= jumpCounterLimit){ 
+    if(jumptime >= jumptimeLimit){ 
       isJumping = false;
-      jumpCounter = 0; 
+      jumptime = 0; 
     }
     //spin while in air
     if(!notInAir){
