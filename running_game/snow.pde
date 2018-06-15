@@ -1,6 +1,6 @@
 class snow{
   
- float x = random(1,500);
+ float x = random(1,1000);
  float y = random(-1000,-50);
  float ht= random (7,15);
  float wt= random (7,15);
@@ -10,7 +10,7 @@ void snowfall(){
  
   y = y + 5;
   
-  if (y >= 430)
+  if (y >= 550)
   {
     y = random(-50,-25);
   }
