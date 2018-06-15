@@ -18,7 +18,7 @@ void setup(){
   
   //enemys
   for(int i = 0; i < 300; i++){
-    enemys[i] = new enemy(1000); //set to 1000, which is the right-most edge of the screen
+    enemys[i] = new enemy(1000); 
   }
 }
 
@@ -152,31 +152,30 @@ void displayControls(){
   }
 }
 
-void scenery(){ //this covers up the entire window, making an actual "background()" unnessecary
-  //background (has several colour changes and ellipses to imitate a setting sun)
+void scenery(){
   noStroke();
   fill(205, 120, 0);
-  ellipse(500, 300, 1500, 1500);
+  rect(500, 300, 1500, 1500);
   fill(210, 125, 5);
-  ellipse(500, 600, 1400, 1400);
+  rect(500, 600, 1400, 1400);
   fill(215, 130, 10);
-  ellipse(500, 600, 1300, 1300);
+  rect(500, 600, 1300, 1300);
   fill(220, 135, 15);
-  ellipse(500, 600, 1200, 1200);
+  rect(500, 600, 1200, 1200);
   fill(225, 140, 20);
-  ellipse(500, 600, 1100, 1100);
+  rect(500, 600, 1100, 1100);
   fill(230, 145, 25);
-  ellipse(500, 600, 1000, 1000);
+  rect(500, 600, 1000, 1000);
   fill(235, 150, 30);
-  ellipse(500, 600, 900, 900);
+  rect(500, 600, 900, 900);
   fill(240, 155, 35);
-  ellipse(500, 600, 800, 800);
+  rect(500, 600, 800, 800);
   fill(245, 160, 40);
-  ellipse(500, 600, 700, 700);
+  rect(500, 600, 700, 700);
   fill(250, 165, 45);
-  ellipse(500, 600, 600, 600);
+  rect(500, 600, 600, 600);
   fill(255, 170, 50);
-  ellipse(500, 600, 500, 500);
+  rect(500, 600, 500, 500);
   //ground
   strokeWeight(3);
   stroke(0);
