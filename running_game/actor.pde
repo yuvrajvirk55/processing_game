@@ -78,18 +78,36 @@ class actor{
     strokeWeight(2);
     stroke(22, 85, 60);
     fill(53, 240, 165);
-    rect(0, 0, _actorSize, _actorSize);
+    ellipse(0, 0, _actorSize+15, _actorSize);
+    fill(0);
+   ellipse(8, 0, 5, 5);
+    ellipse(0, 0, 5, 5);
     noStroke();
     fill(56, 243, 168);
     ellipse(0, 0, _actorSize*0.9, _actorSize*0.9);
+     fill(0);
+    ellipse(0, 0, 5, 5);
+   ellipse(8, 0, 5, 5);
     fill(59, 246, 171);
     ellipse(0, 0, _actorSize*0.8, _actorSize*0.8);
+     fill(0);
+    ellipse(0, 0, 5, 5);
+   ellipse(8, 0, 5, 5);
     fill(62, 249, 174);
     ellipse(0, 0, _actorSize*0.7, _actorSize*0.7);
+     fill(0);
+    ellipse(0, 0, 5, 5);
+   ellipse(8, 0, 5, 5);
     fill(65, 252, 177);
     ellipse(0, 0, _actorSize*0.6, _actorSize*0.6);
+     fill(0);
+    ellipse(0, 0, 5, 5);
+   ellipse(8, 0, 5, 5);
     fill(68, 255, 180);
     ellipse(0, 0, _actorSize*0.5, _actorSize*0.5);
+     fill(0);
+    ellipse(0, 0, 5, 5);
+   ellipse(8, 0, 5, 5);
     
     popMatrix();//matrix necessary to contain the rotate transformation
   }
