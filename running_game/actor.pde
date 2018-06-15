@@ -2,7 +2,7 @@
 
 class actor{
   
-  int _actorX; //x position 
+  int _x_coo_actor; //x position 
   int _actorY; //y position
   int _actorSize; //size o
   int _startY; 
@@ -18,7 +18,7 @@ class actor{
 
   actor(int x, int y, int size){ 
     
-    _actorX = x;
+    _x_coo_actor = x;
     _actorY = y;
     _actorSize = size;
     _startY = y; 
@@ -59,7 +59,7 @@ class actor{
   
   
   int getX(){ 
-    return _actorX + _actorSize/2; // location of the actor's front coordinate
+    return _x_coo_actor + _actorSize/2; // location of the actor's front coordinate
   }
   int getY(){
     return _actorY + _actorSize/2; // location of the actors's bottom coordinate
@@ -69,7 +69,7 @@ class actor{
     pushMatrix(); 
     
     rectMode(CENTER); 
-    translate(_actorX, _actorY); 
+    translate(_x_coo_actor, _actorY); 
     rotate(jumpAngle); 
     
   
