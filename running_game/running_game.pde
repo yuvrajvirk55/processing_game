@@ -39,7 +39,7 @@ void draw(){
   
   //timer_timer_clock, scoreboard and control display
   timer_timer_clock();
-  scoreboard(); 
+  scoreboard_to_display(); 
   display_actor_Controls();
 }
 
@@ -98,12 +98,9 @@ void timer_timer_clock(){
   
 }
 
-void reset(){ //resets the game back to the beginning
-  //replays music from start
-
-  //resets timer_timer_clock
+void reset(){ 
   timer_timer_clock = 0;
-  //resets enemys
+
   for(int i = 0; i < 300; i++){
     enemys[i] = new enemy(1000);
   }
@@ -115,7 +112,7 @@ void reset(){ //resets the game back to the beginning
   fade = 0;
 }
 
-void scoreboard(){ //scoreboard that tracks longest travelled distance
+void scoreboard_to_display(){ //scoreboard that tracks longest travelled distance
   if(timer_timer_clock > maxScore){
     maxScore = timer_timer_clock;
   }
