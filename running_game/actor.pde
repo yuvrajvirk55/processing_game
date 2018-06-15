@@ -7,12 +7,12 @@ class actor{
   int _actorSize; //size o
   int _startY; 
   
-  //attributes (not affected by arguments)
-  int gravity = 6; //gravity that the actor object is affected by
-  int jumpCounter = 0; //counter used to determine how long the jump lasts
-  int jumpCounterLimit = 20; //the limit for the jumpCounter
-  boolean isJumping = false; //boolean used to trigger jump
-  float jumpAngle = 0; //the angle at which actor object is rotated
+  
+  int gravity = 6; 
+  int jumpCounter = 0; 
+  int jumpCounterLimit = 20; 
+  boolean isJumping = false; 
+  float jumpAngle = 0; 
   float incrementAngle = PI/20; //the increment at which the jumpAngle will be changed when jumping
   boolean notInAir = true; //used to determine when actor object is allowed to jump
 
