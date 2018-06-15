@@ -65,14 +65,14 @@ class actor{
     return _actorY + _actorSize/2; // location of the actors's bottom coordinate
   }
 
-  void display(){ //is put into "draw()" to constantly update
-    pushMatrix(); //matrix necessary to contain the rotate transformation
+  void display(){ 
+    pushMatrix(); 
     
-    rectMode(CENTER); //set rectMode
-    translate(_actorX, _actorY); //sets the 0,0 to be inside itself, used for rotating correctly
-    rotate(jumpAngle); //is always rotating, but the jumpAngle is set to 0, which means no rotating
+    rectMode(CENTER); 
+    translate(_actorX, _actorY); 
+    rotate(jumpAngle); 
     
-    //similar to the scenery function it has gradient colours
+  
     strokeWeight(2);
     stroke(22, 85, 60);
     
