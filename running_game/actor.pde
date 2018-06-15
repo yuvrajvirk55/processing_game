@@ -30,19 +30,19 @@ class actor{
     }
   }
   
-  void physics(){ //is put into the "draw()" to constantly update
+  void physics(){ 
     //gravity
-    if(_actorY < _startY){ //if actor object's y position is less than the starting y position
+    if(_actorY < _startY){ 
       _actorY += gravity; //increment actor object's y position by gravity
-      notInAir = false; //actor object is not in the air, stopping "jump()" from working
+      notInAir = false; //actor object is not in the air
     }else{
-      notInAir = true; //if actor is on the "floor" = true, allowing "jump()" to work
+      notInAir = true; 
     }
     
-    //jump triggered by "jump()" method
+  
     if(isJumping){
-      _actorY -= 12; //increments the y position of the actor simulating a jump
-      jumpCounter += 1; //increments the jumpCounter, which determines when to stop jumping 
+      _actorY -= 12; //increments the y position o
+      jumpCounter += 1; //increments the jumpCounter
     }
     if(jumpCounter >= jumpCounterLimit){ //when the counter reaches the limit the jump stops
       isJumping = false;
