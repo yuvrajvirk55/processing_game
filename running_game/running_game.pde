@@ -8,7 +8,7 @@ enemy[] enemys = new enemy[300]; //number of enemys
 
 int timer_timer_clock = 0; //used for score and timing enemys
 int deathClock_count = 0; //used to track deaths (manually resetting counts as well)
-int highScore = 0; //creating counter used to show the actor's highscore
+int maxScore = 0; //creating counter used to show the actor's maxScore
 int fade = 0; //used to fade to dark when actor wins
 
 void setup(){
@@ -124,14 +124,14 @@ void reset(){ //resets the game back to the beginning
 }
 
 void scoreboard(){ //scoreboard that tracks longest travelled distance
-  if(timer_timer_clock > highScore){
-    highScore = timer_timer_clock;
+  if(timer_timer_clock > maxScore){
+    maxScore = timer_timer_clock;
   }
   textAlign(CENTER);
-  //highscore display
+  //maxScore display
   textSize(35);
   fill(0);
-  text("Highscore: "+highScore/60, 800, 50); //highscore is divided by 60 so each second = 1 point
+  text("maxScore: "+maxScore/60, 800, 50); //maxScore is divided by 60 so each second = 1 point
   //death counter display
   fill(255);
   textSize(45);
