@@ -31,7 +31,7 @@ void draw(){
     enemys[i].move(4); 
   }
   enemySpawn(); 
-  collision();
+  collision_with_human();
   
   //hero
   hero.display();
@@ -63,12 +63,12 @@ void keyPressed(){
   }
 }
 
-void collision(){
+void collision_with_human(){
   //collision with spike
   for(int i = 0; i < 300; i++){
     if(hero.getX() > enemys[i].spikeGetX1() && hero.getX() < enemys[i].spikeGetX2()){
       if(hero._y_coo_actor > enemys[i].spikeGetY1() && hero._y_coo_actor < enemys[i].spikeGetY2()){
-        println("Death by Spike");
+        println("Dead");
 
         delay(1000);
         reset();
