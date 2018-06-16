@@ -217,16 +217,13 @@ void enemySpawn(){
   if(timer_timer_clock > 450){
     enemys[4].spike(550);
   }
-  if(timer_timer_clock > 525){
+  if(timer_timer_clock > 555){
     enemys[5].spike(550);
   }
-  if(timer_timer_clock > 600){
+  if(timer_timer_clock > 700){
     enemys[6].spike(550);
   }
-  //===============(600 = 10s)===============
-  if(timer_timer_clock > 675){
-    enemys[7].spike(550);
-  }
+ 
  
   if(timer_timer_clock > 750){
     enemys[1].square(525);
@@ -240,10 +237,7 @@ void enemySpawn(){
   if(timer_timer_clock > 845){
     enemys[4].square(375);
   }
-  if(timer_timer_clock > 850){
-    enemys[9].spike(550);
- 
-  }
+
   if(timer_timer_clock > 880){
     enemys[5].square(375);
   }
@@ -254,9 +248,7 @@ void enemySpawn(){
   if(timer_timer_clock > 965){
     enemys[14].spike(550);
   }
-  if(timer_timer_clock > 1005){
-    enemys[15].spike(550);
-  }
+
   if(timer_timer_clock > 1080){ 
     enemys[7].square(525);
   }
@@ -273,27 +265,19 @@ void enemySpawn(){
   if(timer_timer_clock > 1240){ 
     enemys[11].square(525);
   }
-  if(timer_timer_clock > 1276){ 
-    enemys[16].spike(450);
-  }
+
   if(timer_timer_clock > 1280){ 
     enemys[12].square(475);
   }
   if(timer_timer_clock > 1330){ 
     enemys[13].square(525);
   }
-  if(timer_timer_clock > 1338){
-    enemys[17].spike(550);
-  }
-  if(timer_timer_clock > 1346){
-    enemys[18].spike(550);
-  }
+
+
   if(timer_timer_clock > 1354){
     enemys[19].spike(550);
   }
-  if(timer_timer_clock > 1362){
-    enemys[20].spike(550);
-  }
+  
   if(timer_timer_clock > 1450){ 
     enemys[14].square(525);
   }

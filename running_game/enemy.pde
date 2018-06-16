@@ -42,7 +42,7 @@ class enemy{
     strokeWeight(2);
     stroke(150);
     fill(0,random(10,300),random(30,340));
-    ellipse(_squre_pointx, _squre_pointy, 100, 30);
+    ellipse(_squre_pointx, _squre_pointy, 200, 30);
     _squre_pointx -= _race;
   }
   
